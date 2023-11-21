@@ -27,7 +27,7 @@
             </div>
             <div class="project-nav">
                 <h2>Projects</h2>
-                <button class="buttons">+ Add project</button>
+                <button class="buttons form-trigger">+ Add project</button>
                 <div id="symbols">
                 <div class="priority-symbols high-symbol"></div><p>High priority</p> <br>
                 <div class="priority-symbols low-symbol"></div><p>Low priority</p>
@@ -37,23 +37,40 @@
 
         <div class="main-content">
             <div id="container">
-                <p id="project-heading">This Week
-                </p>
-                <div class="projects">
-                    <input type="checkbox" name="checkbox" id="checkbox">
-                    <p id="project-title">take out the trash</p>
-                    <p class="project-date"></p>
-                    <button class="project-btns" id="btn-edit">edit</button>
-                    <button class="project-btns" id="btn-delete">delete</button>
+
+                <div class="project-form">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title">
+                    <label for="priority">Priority</label>
+                    <select name="priority" id="priority">
+                        <option value="high">high</option>
+                        <option value="low">low</option>
+                    </select>
+                    <label for="date">Date</label>
+                    <input type="date" name="date" id="date">
+                    <button id="submit-project">Add</button>
+                    <button id="cancel-add">Cancel</button>
                 </div>
 
+                <p id="project-heading">This Week
+                </p>
+
                 <div class="projects">
-                    <input type="checkbox" name="checkbox" id="checkbox">
-                    <p id="project-title">ttd gydy</p>
+                    <input type="checkbox" name="checkbox" class="checkbox">
+                    <p id="project-title">Finish TheOdinProject</p>
                     <p class="project-date"></p>
-                    <button class="project-btns" id="btn-edit">edit</button>
-                    <button class="project-btns" id="btn-delete">delete</button>
+                    <button class="project-btns edit-btn btn-edit">edit</button>
+                    <button class="project-btns delete-btn btn-delete">delete</button>
                 </div>
+                <div class="projects">
+                    <input type="checkbox" name="checkbox" class="checkbox">
+                    <p id="project-title">Finish To-do Project</p>
+                    <p class="project-date"></p>
+                    <button class="project-btns edit-btn btn-edit">edit</button>
+                    <button class="project-btns delete-btn btn-delete">delete</button>
+                </div>
+
+
 
             </div>
         </div>
