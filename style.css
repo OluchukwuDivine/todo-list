@@ -122,10 +122,10 @@ main{
     margin-top: 0.3em;
 }
 .high-priority{
-    border-left: 2px solid rgb(230, 45, 45);
+    border-left: 3px solid rgb(230, 45, 45);
 }
 .low-priority{
-    border-left: 2px solid rgb(223, 174, 84);
+    border-left: 3px solid rgb(223, 174, 84);
 }
 #project-title{
     text-transform: capitalize;
