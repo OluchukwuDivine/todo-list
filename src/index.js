@@ -1,8 +1,5 @@
-import { createToDo } from "./create-to-do";
+import { ToDo, addTodo } from "./create-to-do";
 import {clickedForm, canceledAdd} from "./form";
-
-createToDo("name", "sksjs", "msisj", "skjj");
-console.log(createToDo);
 
     //code to check completed tasks using checkboxes
     const checkboxes = document.querySelectorAll(".checkbox");
@@ -12,7 +9,6 @@ console.log(createToDo);
         checkbox.addEventListener("change", function () {
             //Get the corresponding project title paragraph
             const projectTitle = this.closest(".projects").querySelector("#project-title");
-
             //Toggle the 'strikethrough' class based on checkbox state
             projectTitle.classList.toggle("strikethrough", this.checked);
         });
@@ -22,18 +18,16 @@ console.log(createToDo);
 // Function to handle the delete button click
 function handleDeleteButtonClick() {
     const deleteButtons = document.querySelectorAll('.delete-btn');
-  
     deleteButtons.forEach(deleteButton => {
       deleteButton.addEventListener('click', () => {
         // Get the parent container of the clicked delete button
         const todoItem = deleteButton.closest('.projects');
-        
         // Remove the todo item from the DOM
         todoItem.remove();
       });
     });
   }
-  
-  // Initial setup
  handleDeleteButtonClick();
+
+
   
