@@ -23,10 +23,6 @@ export function renderTodo(){
     toggleDoneTasks();
     canceledAdd();
 
-
-
-    console.log(Priority);
-    console.log(Title); 
 }
 
 
