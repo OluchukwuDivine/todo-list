@@ -1,6 +1,8 @@
 import { ToDo, addTodo } from "./create-to-do";
 import {clickedForm, canceledAdd} from "./form";
 
+
+export function toggleDoneTasks(){
     //code to check completed tasks using checkboxes
     const checkboxes = document.querySelectorAll(".checkbox");
 
@@ -13,10 +15,12 @@ import {clickedForm, canceledAdd} from "./form";
             projectTitle.classList.toggle("strikethrough", this.checked);
         });
     });
+  }
+  toggleDoneTasks();
     //code for checkboxes ends just above here
 
 // Function to handle the delete button click
-function handleDeleteButtonClick() {
+export function handleDeleteButtonClick() {
     const deleteButtons = document.querySelectorAll('.delete-btn');
     deleteButtons.forEach(deleteButton => {
       deleteButton.addEventListener('click', () => {

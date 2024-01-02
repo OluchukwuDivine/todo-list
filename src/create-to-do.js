@@ -1,24 +1,35 @@
-import { projectForm } from "./form";
-import {submitProjectBtn} from "./index";
+import { projectForm, canceledAdd } from "./form";
+import {submitProjectBtn, toggleDoneTasks, handleDeleteButtonClick} from "./index";
 
-const todoContainer = document.querySelector("#container");
-
-export function ToDo(title, priority, date){
-    this.title = title;
-    this.priority = priority;
-    this.date = date;
-}
 
 export function renderTodo(){
-    // const titleTab = document.querySelector("#title").value;
-    // const priorityTab = document.querySelector("#priority").value;
-    // const dateTab = document.querySelector("#date").value;
-    // const newTodo =  new ToDo(title, priority, date);
 
-    // const newTodoDiv= document.createElement(div);
-    // todoContainer.appendChild(newTodoDiv);
-    
-    console.log("yay")
+    const todoContainer = document.querySelector("#container");
+    const Title = document.querySelector("#title").value;
+    const Priority = document.querySelector("#priority").value;
+    const Date = document.querySelector("#date").value;
+
+    const newTodoDiv= document.createElement("div");
+    newTodoDiv.innerHTML= `
+    <div class="projects adjustment ${Priority === 'low' ? 'low-priority' : 'high-priority'}">
+    <input type="checkbox" name="checkbox" class="checkbox">
+    <p id="project-title">${Title}</p>
+    <p class="project-date">${Date}</p>
+    <button class="project-btns delete-btn btn-delete">delete</button>
+</div>
+    `
+    todoContainer.appendChild(newTodoDiv);
+    handleDeleteButtonClick();
+    toggleDoneTasks();
+    canceledAdd();
+
+
+
+    console.log(Priority);
+    console.log(Title); 
 }
+
+
+
 
 
